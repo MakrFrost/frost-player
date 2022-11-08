@@ -1,0 +1,48 @@
+<section class="player player-active">
+  <h2 class="visually-hidden">PLAYER</h2>
+  <div class="container">
+    <div class="player__track-info track-info">
+      <p class="player__track">Track</p>
+      <p class="player__group">Group</p>
+    </div>
+
+    <div class="player__controller">
+      <button class="player__button player__button-stop">stop</button
+      ><button class="player__button player__button-prev">prev</button
+      ><button class="player__button player__button-pause">pause</button
+      ><button class="player__button player__button-next">next</button
+      ><button class="player__button player__button-favorite">favorite</button>
+    </div>
+
+    <div class="player__progress-wrap">
+      <div class="player__progress">
+        <input
+          class="player__input-progress"
+          type="range"
+          min="0"
+          max="100"
+          value="0"
+        />
+      </div>
+
+      <p class="player__time">
+        <span class="player-time__passed">00:00</span>
+        <span>/</span>
+        <span class="player-time__total">11:24</span>
+      </p>
+    </div>
+
+    <div class="player__volume-wrap">
+      <div class="player__volume">
+        <input
+          class="player__volume-input"
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+        />
+      </div>
+      <button class="player__button player__button-mute">mute</button>
+    </div>
+  </div>
+</section>
