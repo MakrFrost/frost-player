@@ -5,7 +5,7 @@
   "homepage": "https://MakrFrost.github.io/frost-player",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "build": "parcel build src/*.html --public-url /frost-player/"
   },
   "dependencies": {
     "modern-normalize": "^1.1.0"
