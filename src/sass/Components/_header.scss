@@ -1,3 +1,27 @@
-.header__logo {
-  color: currentColor;
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  &__link {
+    margin-right: 94px;
+  }
+  &__logo {
+    color: currentColor;
+  }
+  &__form {
+    flex-grow: 1;
+    margin-right: auto;
+    max-width: 692px;
+  }
+  &__input {
+  }
+  &__button {
+  }
+  &__icon-search {
+  }
+  &__icon-favorite {
+  }
 }
