@@ -2,6 +2,7 @@
   "name": "frost-player",
   "version": "2.0.0",
   "description": "",
+  "homepage": "https://MakrFrost.github.io/frost-player",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /parcel-project-template/"
