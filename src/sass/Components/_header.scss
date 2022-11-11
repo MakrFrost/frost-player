@@ -1,27 +1,78 @@
 .header {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  &::before {
+    content: '';
+    overflow: hidden; // обязательно!
+    display: block;
+  }
   &__container {
     display: flex;
     align-items: center;
   }
   &__link {
+    display: flex;
+    align-items: center;
     margin-right: 94px;
+    font-weight: bold;
+    color: #fff;
+    &:hover,
+    &:active,
+    &:focus {
+      color: rgba(255, 255, 255, 0.8);
+      // border: 1px solid var(--accent-color);
+    }
   }
   &__logo {
-    color: currentColor;
+    margin-left: 8px;
+    width: 24px;
+    fill: currentColor;
   }
   &__form {
+    position: relative;
     flex-grow: 1;
     margin-right: auto;
     max-width: 692px;
   }
   &__input {
+    width: 100%;
+    height: 36px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+    outline: none;
+    padding: 0 40px 0 16px;
+    font-weight: 300;
+    font-size: 18px;
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+    &:focus {
+      box-shadow: inset 0px -1px 4px rgba(0, 0, 0, 0.25);
+    }
   }
   &__button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 0;
   }
   &__icon-search {
+    width: 22px;
+    height: 22px;
+    &:hover {
+      fill: rgba(0, 0, 0, 0.534);
+    }
+  }
+  &__button-favorite {
+    max-height: 22px;
   }
   &__icon-favorite {
+    width: 22px;
+    height: 22px;
+    &:hover {
+      fill: red;
+    }
   }
 }
