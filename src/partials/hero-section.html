@@ -1,8 +1,8 @@
 <section class="catalog">
   <h2 class="visually-hidden">Список трeков</h2>
-  <div class="container catalog__wrap">
+  <div class="container catalog__wrapper">
     <ul class="catalog__list">
-      <li class="catalog__item">
+      <li class="catalog__item catalog__active">
         <button class="catalog__button">
           <div class="catalog__wrap">
             <img
@@ -27,7 +27,7 @@
             />
           </div>
           <div class="catalog__track">
-            <p class="catalog__track">TRACK</p>
+            <p class="catalog__name">TRACK</p>
             <p class="catalog__group">GROUP</p>
           </div>
         </button>
@@ -42,7 +42,22 @@
             />
           </div>
           <div class="catalog__track">
-            <p class="catalog__track">TRACK</p>
+            <p class="catalog__name">TRACK</p>
+            <p class="catalog__group">GROUP</p>
+          </div>
+        </button>
+      </li>
+      <li class="catalog__item catalog__active">
+        <button class="catalog__button">
+          <div class="catalog__wrap">
+            <img
+              class="catalog__img"
+              src="./images/zaglushka.jpg"
+              alt="Photo Album"
+            />
+          </div>
+          <div class="catalog__track">
+            <p class="catalog__name">TRACK</p>
             <p class="catalog__group">GROUP</p>
           </div>
         </button>
@@ -57,7 +72,7 @@
             />
           </div>
           <div class="catalog__track">
-            <p class="catalog__track">TRACK</p>
+            <p class="catalog__name">TRACK</p>
             <p class="catalog__group">GROUP</p>
           </div>
         </button>
@@ -72,7 +87,7 @@
             />
           </div>
           <div class="catalog__track">
-            <p class="catalog__track">TRACK</p>
+            <p class="catalog__name">TRACK</p>
             <p class="catalog__group">GROUP</p>
           </div>
         </button>
@@ -87,7 +102,7 @@
             />
           </div>
           <div class="catalog__track">
-            <p class="catalog__track">TRACK</p>
+            <p class="catalog__name">TRACK</p>
             <p class="catalog__group">GROUP</p>
           </div>
         </button>
@@ -102,7 +117,7 @@
             />
           </div>
           <div class="catalog__track">
-            <p class="catalog__track">TRACK</p>
+            <p class="catalog__name">TRACK</p>
             <p class="catalog__group">GROUP</p>
           </div>
         </button>
@@ -117,7 +132,7 @@
             />
           </div>
           <div class="catalog__track">
-            <p class="catalog__track">TRACK</p>
+            <p class="catalog__name">TRACK</p>
             <p class="catalog__group">GROUP</p>
           </div>
         </button>
@@ -132,7 +147,7 @@
             />
           </div>
           <div class="catalog__track">
-            <p class="catalog__track">TRACK</p>
+            <p class="catalog__name">TRACK</p>
             <p class="catalog__group">GROUP</p>
           </div>
         </button>
@@ -147,7 +162,7 @@
             />
           </div>
           <div class="catalog__track">
-            <p class="catalog__track">TRACK</p>
+            <p class="catalog__name">TRACK</p>
             <p class="catalog__group">GROUP</p>
           </div>
         </button>
@@ -162,26 +177,17 @@
             />
           </div>
           <div class="catalog__track">
-            <p class="catalog__track">TRACK</p>
-            <p class="catalog__group">GROUP</p>
-          </div>
-        </button>
-      </li>
-      <li class="catalog__item">
-        <button class="catalog__button">
-          <div class="catalog__wrap">
-            <img
-              class="catalog__img"
-              src="./images/zaglushka.jpg"
-              alt="Photo Album"
-            />
-          </div>
-          <div class="catalog__track">
-            <p class="catalog__track">TRACK</p>
+            <p class="catalog__name">TRACK</p>
             <p class="catalog__group">GROUP</p>
           </div>
         </button>
       </li>
     </ul>
+    <button class="catalog__button--add">
+      Загрузить больше
+      <svg class="catalog__button--add-icon">
+        <use href="./images/symbol-defs.svg#icon-arrow-right2"></use>
+      </svg>
+    </button>
   </div>
 </section>
