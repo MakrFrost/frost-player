@@ -1,17 +1,39 @@
 <section class="player player-active">
   <h2 class="visually-hidden">PLAYER</h2>
-  <div class="container">
+  <div class="player__container">
     <div class="player__track-info track-info">
       <p class="player__track">Track</p>
       <p class="player__group">Group</p>
     </div>
 
     <div class="player__controller">
-      <button class="player__button player__button-stop">stop</button
-      ><button class="player__button player__button-prev">prev</button
-      ><button class="player__button player__button-pause">pause</button
-      ><button class="player__button player__button-next">next</button
-      ><button class="player__button player__button-favorite">favorite</button>
+      <button class="player__button">
+        <svg class="player__icon-stop">
+          <use href="./images/symbol-defs.svg#icon-stop2"></use>
+        </svg></button
+      ><button class="player__button">
+        <svg class="player__icon-prev">
+          <use href="./images/symbol-defs.svg#icon-backward"></use>
+        </svg></button
+      ><button class="player__button">
+        <svg class="player__icon-pause">
+          <use href="./images/symbol-defs.svg#icon-pause2"></use>
+        </svg>
+      </button>
+      <button class="player__button">
+        <svg class="player__icon-play">
+          <use href="./images/symbol-defs.svg#icon-play3"></use>
+        </svg>
+      </button>
+      <button class="player__button">
+        <svg class="player__icon-next">
+          <use href="./images/symbol-defs.svg#icon-forward"></use>
+        </svg></button
+      ><button class="player__button">
+        <svg class="player__icon-favorite">
+          <use href="./images/symbol-defs.svg#icon-heart"></use>
+        </svg>
+      </button>
     </div>
 
     <div class="player__progress-wrap">

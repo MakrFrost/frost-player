@@ -17,15 +17,19 @@
 <symbol id="icon-play3" viewBox="0 0 32 32">
 <path d="M6 4l20 12-20 12z"></path>
 </symbol>
+<!--! check-->
 <symbol id="icon-pause2" viewBox="0 0 32 32">
 <path d="M4 4h10v24h-10zM18 4h10v24h-10z"></path>
 </symbol>
+<!--! check-->
 <symbol id="icon-stop2" viewBox="0 0 32 32">
 <path d="M4 4h24v24h-24z"></path>
 </symbol>
+<!--! check-->
 <symbol id="icon-backward" viewBox="0 0 32 32">
 <path d="M18 5v10l10-10v22l-10-10v10l-11-11z"></path>
 </symbol>
+<!--! check-->
 <symbol id="icon-forward" viewBox="0 0 32 32">
 <path d="M16 27v-10l-10 10v-22l10 10v-10l11 11z"></path>
 </symbol>
