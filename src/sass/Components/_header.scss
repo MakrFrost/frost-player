@@ -1,6 +1,8 @@
 .header {
   margin-top: 24px;
   margin-bottom: 24px;
+
+  position: relative;
   &::before {
     content: '';
     overflow: hidden; // обязательно!
@@ -8,16 +10,20 @@
   }
   &__container {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
   }
   &__link {
     display: flex;
     align-items: center;
-    margin-right: 94px;
     font-weight: bold;
     height: 26px;
     color: #fff;
     transition: color 250ms ease-in-out;
+    font-size: 18px;
+
+    margin-bottom: 16px;
     &:hover,
     &:active,
     &:focus {
@@ -25,7 +31,7 @@
     }
   }
   &__logo {
-    margin-left: 8px;
+    margin-left: 10px;
     width: 24px;
     fill: currentColor;
   }
@@ -33,7 +39,7 @@
     position: relative;
     flex-grow: 1;
     margin-right: auto;
-    max-width: 692px;
+    width: 290px;
   }
   &__input {
     width: 100%;
@@ -67,12 +73,16 @@
       transition: fill 250ms ease-in-out;
     }
   }
+
   &__button-favorite {
     max-height: 22px;
+    position: absolute;
+    top: 2px;
+    right: 18px;
   }
   &__icon-favorite {
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     transition: fill 250ms ease-in-out, scale 350ms ease-in-out;
     fill: #fff;
     &:hover {
@@ -83,6 +93,38 @@
 }
 
 @media screen and (min-width: 768px) {
+  .header {
+    &__container {
+      flex-direction: row;
+      align-items: center;
+    }
+    &__link {
+      margin-bottom: 0;
+      margin-right: 38px;
+      font-size: 22px;
+    }
+    &__form {
+      max-width: 350px;
+    }
+    &__button-favorite {
+      top: 6px;
+    }
+  }
 }
 @media screen and (min-width: 1200px) {
+  .header {
+    &__link {
+      margin-right: 94px;
+    }
+    &__form {
+      position: relative;
+      flex-grow: 1;
+      margin-right: auto;
+      max-width: 692px;
+    }
+    &__button-favorite {
+      max-height: 22px;
+      position: static;
+    }
+  }
 }
