@@ -21,8 +21,9 @@ body {
   background-attachment: fixed;
   background-position: center;
 
-  padding-bottom: 170px;
-  overflow-y: hidden;
+  margin-bottom: 180px;
+  //!
+  // overflow-y: hidden;
 }
 
 img,
@@ -80,6 +81,9 @@ p {
 }
 
 @media screen and (min-width: 768px) {
+  body {
+    margin-bottom: 140px;
+  }
   .container {
     width: 768px;
     margin: 0 auto;
@@ -87,6 +91,9 @@ p {
   }
 }
 @media screen and (min-width: 1200px) {
+  body {
+    margin-bottom: 120px;
+  }
   .container {
     width: 1280px;
     margin: 0 auto;
