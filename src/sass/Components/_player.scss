@@ -1,185 +1,415 @@
-// @media screen and (min-width: 320px) {}
-.player {
-  position: fixed;
-  right: 0;
-  left: 0;
-  bottom: -100%;
+@media screen and (min-width: 320px) {
+  .player {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: -100%;
 
-  max-width: 1228px;
-  height: 90px;
+    width: 320px;
 
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(6px);
-  border-radius: 20px;
-  margin: 0 auto;
-  padding: 24px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(6px);
+    border-radius: 30px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 
-  transition: bottom 350ms ease-in-out;
-  &-active {
-    bottom: 26px;
+    margin: 0 auto;
+    padding: 24px;
+
+    transition: bottom 350ms ease-in-out;
+    &-active {
+      bottom: 0;
+    }
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      justify-items: center;
+    }
   }
-  &__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 3fr 1fr;
-    gap: 20px;
+  //! информация про трэк
+  .player {
+    &__track-info {
+    }
+    &__track {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+    &__group {
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 1.2;
+    }
   }
-}
-
-//! информация про трэк
-.player__track-info {
-}
-.track-info {
-}
-.player__track {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1.2;
-  margin-bottom: 6px;
-}
-.player__group {
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 1.2;
-}
-
-//!панелька контроля
-.player__controller {
-  display: flex;
-  gap: 15px;
-  justify-content: space-between;
-}
-.player__button {
-  & svg {
-    width: 22px;
-    height: 22px;
+  .track-info {
   }
-}
-.player__icon-stop {
-}
-.player__icon-prev {
-}
-.player__icon-pause {
-  display: none;
-}
-.player__icon-play {
-  //   display: none;
-}
-.player__icon-next {
-}
-.player__icon-favorite {
-}
-
-//! панелька прокрутки
-.player__progress-wrap {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-.player__progress {
-  flex-grow: 1;
-  max-width: 486px;
-}
-.player__input-progress {
-  padding: 9px;
-  background-color: transparent;
-  height: 31px;
-  -webkit-appearance: none;
-  margin: 10px 0;
-  width: 100%;
-  &:focus {
-    outline: none;
+  //!панелька контроля
+  .player {
+    &__controller {
+      display: flex;
+      gap: 15px;
+      justify-content: space-between;
+    }
+    &__button {
+      & svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+    &__icon-stop {
+    }
+    &__icon-prev {
+    }
+    &__icon-pause {
+      display: none;
+    }
+    &__icon-play {
+      //   display: none;
+    }
+    &__icon-next {
+    }
+    &__icon-favorite {
+    }
   }
+  //! панелька прокрутки
+  .player {
+    &__progress-wrap {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    &__progress {
+      flex-grow: 1;
+      max-width: 486px;
+    }
+    &__input-progress {
+      padding: 9px;
+      background-color: transparent;
+      height: 31px;
+      -webkit-appearance: none;
+      // margin: 10px 0;
+      width: 100%;
+      &:focus {
+        outline: none;
+      }
 
-  &::-webkit-slider-runnable-track {
+      &::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 6px;
+        cursor: pointer;
+        box-shadow: 0px 0px 0px #000000;
+        // background: #1e5a32;
+        background: #757575;
+        border-radius: 20px;
+        border: 0px solid #000000;
+      }
+      &::-webkit-slider-thumb {
+        box-shadow: 0px 0px 0px #000000;
+        border: 1px solid #000000;
+        height: 24px;
+        width: 12px;
+        border-radius: 30px;
+        background: #ffffff;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -9.5px;
+
+        transition: background 350ms ease-in-out;
+        &:hover {
+          background: #ffffffd5;
+        }
+      }
+    }
+    &__time {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.2;
+      &__passed {
+      }
+      &__total {
+        font-size: 14px;
+        line-height: 1.2;
+      }
+    }
+  }
+  //! панелька управления звуком
+  .player {
+    &__volume-wrap {
+      display: none;
+    }
+    &__volume {
+      background: url(./level-volume2.svg) center/contain no-repeat;
+      width: 146px;
+      height: 16px;
+    }
+    &__button-level {
+      margin-left: 8px;
+    }
+    &__button-active {
+      display: block;
+    }
+    &__button-disabled {
+      display: none;
+    }
+  }
+  .player .player__volume-input {
+    background-color: transparent;
+    -webkit-appearance: none;
     width: 100%;
-    height: 6px;
-    cursor: pointer;
-    box-shadow: 0px 0px 0px #000000;
-    // background: #1e5a32;
-    background: #757575;
-    border-radius: 20px;
-    border: 0px solid #000000;
-  }
-  &::-webkit-slider-thumb {
-    box-shadow: 0px 0px 0px #000000;
-    border: 1px solid #000000;
-    height: 24px;
-    width: 12px;
-    border-radius: 30px;
-    background: #ffffff;
-    cursor: pointer;
-    -webkit-appearance: none;
-    margin-top: -9.5px;
+    height: 100%;
+    &:focus {
+      outline: none;
+    }
+    &::-webkit-slider-runnable-track {
+      height: 25%;
+      cursor: pointer;
+    }
+    &::-webkit-slider-thumb {
+      box-shadow: 0px 0px 0px #000000;
+      border: 1px solid #000000;
+      height: 24px;
+      width: 12px;
+      border-radius: 30px;
+      background: #ffffff;
+      cursor: pointer;
+      -webkit-appearance: none;
+      margin-top: -9.5px;
 
-    transition: background 350ms ease-in-out;
-    &:hover {
-      background: #ffffffd5;
+      transition: background 350ms ease-in-out;
+      &:hover {
+        background: #ffffffd5;
+      }
     }
   }
-}
-
-.player__time {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.2;
-  &__passed {
-  }
-  &__total {
-    font-size: 14px;
-    line-height: 1.2;
-  }
-}
-
-//! панелька управления звуком
-.player__volume-wrap {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.player__volume {
-  background: url(./level-volume2.svg) center/contain no-repeat;
-  width: 146px;
-  height: 16px;
-}
-.player__volume-input {
-  background-color: transparent;
-  -webkit-appearance: none;
-  width: 100%;
-  height: 100%;
-  &:focus {
-    outline: none;
-  }
-  &::-webkit-slider-runnable-track {
-    height: 25%;
-    cursor: pointer;
-  }
-  &::-webkit-slider-thumb {
-    box-shadow: 0px 0px 0px #000000;
-    border: 1px solid #000000;
-    height: 24px;
-    width: 12px;
-    border-radius: 30px;
-    background: #ffffff;
-    cursor: pointer;
-    -webkit-appearance: none;
-    margin-top: -9.5px;
-
-    transition: background 350ms ease-in-out;
-    &:hover {
-      background: #ffffffd5;
-    }
-  }
-}
-.player__button-level {
-}
-.player__button-active {
-  display: block;
-}
-.player__button-disabled {
-  display: none;
 }
 
 @media screen and (min-width: 768px) {
+  .player {
+    right: 34px;
+    left: 34px;
+
+    width: 700px;
+    height: 138px;
+    padding: 22px 38px;
+    border-radius: 30px;
+    &-active {
+      bottom: 24px;
+    }
+    &__container {
+      display: grid;
+      justify-items: stretch;
+      gap: 24px 20px;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    &__progress-wrap {
+      order: 1;
+      grid-column: 1 / -1;
+    }
+    &__volume-wrap {
+      justify-content: flex-end;
+      display: flex;
+      align-items: center;
+    }
+    &__track {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.2;
+    }
+    &__group {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.2;
+    }
+  }
 }
+
 @media screen and (min-width: 1200px) {
+  .player {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: -100%;
+
+    width: 1228px;
+    height: 90px;
+
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 24px;
+
+    transition: bottom 350ms ease-in-out;
+    &-active {
+      bottom: 26px;
+    }
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 3fr 1fr;
+      gap: 20px;
+    }
+  }
+
+  //!трэк\название
+  .player {
+    &__track-info {
+    }
+    &__track {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+    &__group {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+  }
+  .track-info {
+  }
+
+  //!панелька контроля
+  .player {
+    &__controller {
+    }
+    &__button {
+      & svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+    &__icon-stop {
+    }
+    &__icon-prev {
+    }
+    &__icon-pause {
+      display: none;
+    }
+    &__icon-play {
+      //   display: none;
+    }
+    &__icon-next {
+    }
+    &__icon-favorite {
+    }
+  }
+
+  //! панелька прокрутки
+  .player {
+    &__progress {
+      flex-grow: 1;
+      width: 488px;
+      &-wrap {
+        order: 0;
+        grid-column: -2 / 3;
+      }
+    }
+    &__input-progress {
+      padding: 9px;
+      background-color: transparent;
+      height: 31px;
+      -webkit-appearance: none;
+      margin: 10px 0;
+      width: 100%;
+      &:focus {
+        outline: none;
+      }
+
+      &::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 6px;
+        cursor: pointer;
+        box-shadow: 0px 0px 0px #000000;
+        // background: #1e5a32;
+        background: #757575;
+        border-radius: 20px;
+        border: 0px solid #000000;
+      }
+      &::-webkit-slider-thumb {
+        box-shadow: 0px 0px 0px #000000;
+        border: 1px solid #000000;
+        height: 24px;
+        width: 12px;
+        border-radius: 30px;
+        background: #ffffff;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -9.5px;
+
+        transition: background 350ms ease-in-out;
+        &:hover {
+          background: #ffffffd5;
+        }
+      }
+    }
+  }
+
+  //! время трэка
+  .player__time {
+    display: flex;
+    gap: 4px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+    &__passed {
+    }
+    &__total {
+      font-size: 14px;
+      line-height: 1.2;
+    }
+  }
+
+  //! панелька управления звуком
+  .player {
+    &__volume-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    &__volume {
+      background: url(./level-volume2.svg) center/contain no-repeat;
+      width: 146px;
+      height: 16px;
+    }
+    &__volume-input {
+      background-color: transparent;
+      -webkit-appearance: none;
+      width: 100%;
+      height: 100%;
+      &:focus {
+        outline: none;
+      }
+      &::-webkit-slider-runnable-track {
+        height: 25%;
+        cursor: pointer;
+      }
+      &::-webkit-slider-thumb {
+        box-shadow: 0px 0px 0px #000000;
+        border: 1px solid #000000;
+        height: 24px;
+        width: 12px;
+        border-radius: 30px;
+        background: #ffffff;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -9.5px;
+
+        transition: background 350ms ease-in-out;
+        &:hover {
+          background: #ffffffd5;
+        }
+      }
+    }
+    &__button-level {
+    }
+    &__button-active {
+      display: block;
+    }
+    &__button-disabled {
+      display: none;
+    }
+  }
 }
