@@ -2,14 +2,16 @@
 
 const audio = new Audio();
 
-const buttonPlay = document.querySelector('.catalog__item');
+const buttonPlay = document.querySelector('.player__icon-play');
 
 buttonPlay.addEventListener('click', () => {
-  PlayMusic('../audio/Adele - Hello.mp3');
+  PlayMusic('./2.mp3');
 });
 
-function PlayMusic(url) {
+const PlayMusic = url => {
   audio.src = url;
   audio.play();
-  console.log('нажал на лишку плэй');
-}
+  console.log('нажал на кнопку плэй');
+};
+
+// 11:49 stop
