@@ -2,17 +2,38 @@
 
 const audio = new Audio();
 
-const buttonPlay = document.querySelector('.player__icon-play');
+const trackCard = document.getElementsByClassName('catalog__item');
+// const buttonPlay = document.querySelector('.player__icon-play');
+const buttonPause = document.querySelector('.player__icon-pause');
+console.log(buttonPause);
 
-const PlayMusic = url => {
-  console.log((audio.src = url));
-  console.log(audio.load());
-  console.log(audio.play());
-  console.log('нажал на кнопку плэй');
-};
-
-buttonPlay.addEventListener('click', () => {
-  PlayMusic('/1.mp3');
+buttonPause.addEventListener('click', () => {
+  if (audio.paused) {
+    audio.play();
+    buttonPause.classList.remove('player__icon-play');
+    console.log('udalili');
+  } else {
+    audio.pause();
+    buttonPause.classList.add('player__icon-play');
+    console.log('dobavili');
+  }
 });
 
-// 11:49 stop
+for (const track of trackCard) {
+  track.addEventListener('click', () => console.log('zapuskaem'));
+}
+
+// const PlayMusic = url => {
+//   console.log((audio.src = url));
+//   console.log(audio.load());
+//   console.log(audio.play());
+//   console.log('нажал на кнопку плэй');
+// };
+
+// buttonPlay.addEventListener('click', () => {
+//   PlayMusic('');
+// });
+
+// console.log('rabotaem player');
+
+// 25 05
