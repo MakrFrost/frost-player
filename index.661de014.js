@@ -1,0 +1,2 @@
+const e=new Audio,o=document.getElementsByClassName("catalog__item"),l=document.querySelector(".player__icon-pause");console.log(l),l.addEventListener("click",(()=>{e.paused?(e.play(),l.classList.remove("player__icon-play"),console.log("udalili")):(e.pause(),l.classList.add("player__icon-play"),console.log("dobavili"))}));for(const e of o)e.addEventListener("click",(()=>console.log("zapuskaem")));
+//# sourceMappingURL=index.661de014.js.map
