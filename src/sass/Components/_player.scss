@@ -57,23 +57,26 @@
       height: 22px;
     }
   }
-  &__icon-stop {
+  &__controller-stop {
   }
-  &__icon-prev {
+  &__controller-prev {
   }
 
   // !
-  &__icon-pause {
-    // display: block;
-  }
-  &__icon-play {
+  &__controller-paused {
     // display: none;
   }
+  &__controller-play {
+    // display: none;
+  }
+  &__controller-modified {
+    // display: block;
+  }
   // !
 
-  &__icon-next {
+  &__controller-next {
   }
-  &__icon-favorite {
+  &__controller-favorite {
   }
 }
 //! панелька прокрутки
