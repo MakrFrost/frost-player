@@ -77,6 +77,10 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: scale 150ms ease-in-out;
+    &:hover {
+      scale: 1.2;
+    }
     &-stop {
       background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='utf-8'?%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 121.53 122.88' style='enable-background:new 0 0 121.53 122.88' xml:space='preserve'%3E%3Cstyle type='text/css'%3E.st0{fill-rule:evenodd;clip-rule:evenodd;}%3C/style%3E%3Cg%3E%3Cpolygon points='0,0 121.53,0 121.53,122.88 0,122.88 0,0'/%3E%3C/g%3E%3C/svg%3E");
     }
@@ -152,7 +156,9 @@
 
       transition: background 350ms ease-in-out;
       &:hover {
+        transition: scale 150ms ease-in-out;
         background: #ffffffd5;
+        scale: 1.2;
       }
     }
   }
@@ -213,7 +219,9 @@
 
     transition: background 350ms ease-in-out;
     &:hover {
+      transition: scale 150ms ease-in-out;
       background: #ffffffd5;
+      scale: 1.2;
     }
   }
 }
